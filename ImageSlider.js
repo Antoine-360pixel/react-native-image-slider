@@ -147,7 +147,11 @@ export default class ImageSlider extends Component {
                     const imageComponent = <Image
                         key={index}
                         source={imageObject}
-                        style={{height, width}}
+                        style={{
+                          width,
+                          height: '100%',
+                          resizeMode: 'cover',
+                        }}
                     />;
                     if (this.props.onPress) {
                         return (
